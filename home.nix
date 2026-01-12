@@ -1,0 +1,49 @@
+{ config, options, lib, pkgs, inputs, ... }:
+
+{
+  imports = [
+    inputs.zen-browser.homeModules.beta
+    inputs.noctalia.homeModules.default
+  ];
+
+  home.packages = with pkgs; [
+    mpv
+    rmpc
+    anki
+    legcord
+    zathura
+    nautilus
+    obs-studio
+
+    prismlauncher
+    waywall
+
+    inkscape
+    blender
+    krita
+
+    fcitx5-mozc-ut
+  ];
+
+  programs.zen-browser.enable = true;
+  programs.kitty.enable = true;
+  programs.zsh.enable = true;
+
+  xdg.configFile = {
+    "atuin".source = "${inputs.dotfiles}/.config/atuin";
+    "kitty".source = "${inputs.dotfiles}/.config/kitty";
+    "lazydocker".source = "${inputs.dotfiles}/.config/lazydocker";
+    "lazygit".source = "${inputs.dotfiles}/.config/lazygit";
+    "mpd".source = "${inputs.dotfiles}/.config/mpd";
+    "niri".source = "${inputs.dotfiles}/.config/niri";
+    "noctalia".source = "${inputs.dotfiles}/.config/noctalia";
+    "rmpc".source = "${inputs.dotfiles}/.config/rmpc";
+    "tmux".source = "${inputs.dotfiles}/.config/tmux";
+    "waywall".source = "${inputs.dotfiles}/.config/waywall";
+    "zathura".source = "${inputs.dotfiles}/.config/zathura";
+  };
+
+  home.file.".zshrc".source = "${inputs.dotfiles}/.zshrc";
+
+  home.stateVersion = "25.11";
+}
