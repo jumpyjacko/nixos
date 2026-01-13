@@ -6,6 +6,7 @@
     inputs.noctalia.homeModules.default
 
     ./modules/atuin.nix
+    ./modules/kitty.nix
   ];
 
   home.packages = with pkgs; [
@@ -32,7 +33,6 @@
   programs.zsh.enable = true;
 
   xdg.configFile = {
-    "kitty".source = "${inputs.dotfiles}/.config/kitty";
     "lazydocker".source = "${inputs.dotfiles}/.config/lazydocker";
     "lazygit".source = "${inputs.dotfiles}/.config/lazygit";
     "mpd".source = "${inputs.dotfiles}/.config/mpd";
