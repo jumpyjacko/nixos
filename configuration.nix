@@ -1,4 +1,4 @@
-{ config, lib, pkgs, inputs ... }: {
+{ config, lib, pkgs, inputs, ... }: {
   imports = [
     # ./hardware-configuration.nix uncomment and ensure this is generated
     ./programs.nix
