@@ -34,7 +34,6 @@
 
   programs.zen-browser.enable = true;
   programs.kitty.enable = true;
-  programs.zsh.enable = true;
 
   xdg.configFile = {
     "niri".source = "${inputs.dotfiles}/.config/niri";
