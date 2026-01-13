@@ -46,9 +46,11 @@
   programs.appimage.enable = true;
   programs.appimage.binfmt = true;
 
+  program.zsh.enable = true;
   users.users.jackson = {
     isNormalUser = true;
     extraGroups = [ "wheel" "audio" "video" "networkmanager" "docker" ];
+    shell = pkgs.zsh;
   };
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];

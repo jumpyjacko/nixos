@@ -24,7 +24,6 @@
     git
     curl
     wget
-    zsh
     tmux
 
     # modern shell replacements
