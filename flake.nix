@@ -31,13 +31,12 @@
     };
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, ... }: let
-    system = "x86_64-linux";
-  in {
-    nixosConfigurations.spectre = nixpkgs.lib.nixosSystem {
-      inherit system;
-      specialArgs = { inherit inputs; };
+  outputs = inputs@{ self, nixpkgs, home-manager, ... }:
+  let
+    mkSystem = host: nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
       modules = [
+        ./hosts/${host}
         ./configuration.nix
         home-manager.nixosModules.home-manager {
           home-manager.useGlobalPkgs = true;
@@ -45,7 +44,12 @@
           home-manager.extraSpecialArgs = { inherit inputs; };
           home-manager.users.jackson = ./home.nix;
         }
-      ];
+      ]
+    };
+  in {
+    nixosConfigurations = {
+      spectre = mkSystem "spectre";
+      vm = mkSystem "vm";
     };
   };
 }
