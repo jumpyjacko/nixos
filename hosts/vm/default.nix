@@ -13,7 +13,7 @@
   };
 
   networking = {
-    networking.hostName = "nixos-vm";
+    hostName = "nixos-vm";
     networkmanager.enable = true;
   };
 

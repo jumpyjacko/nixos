@@ -14,7 +14,7 @@
   };
 
   networking = {
-    networking.hostName = "nixos-spectre";
+    hostName = "nixos-spectre";
     networkmanager.enable = true;
   };
 
