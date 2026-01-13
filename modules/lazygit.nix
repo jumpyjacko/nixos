@@ -29,7 +29,7 @@
           ignoreFile = "I";
         };
         commits = {
-          moveDownCommit: "<c-e>";
+          moveDownCommit = "<c-e>";
           moveUpCommit = "<c-u>";
         };
         branches = {

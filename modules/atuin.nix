@@ -1,5 +1,5 @@
 {
-  program.atuin = {
+  programs.atuin = {
     enable = true;
     settings = {
       dialect = "uk";
