@@ -3,10 +3,12 @@
     enable = true;
     settings = {
       gui.border = "hidden";
-      git.pagers = {
-        colorArg = "always";
-        pager = "bat --paging=never --decorations=never";
-      };
+      git.pagers = [
+        {
+          colorArg = "always";
+          pager = "bat --paging=never --decorations=never";
+        }
+      ];
       keybinding = {
         universal = {
           prevItem-alt = "e";
