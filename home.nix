@@ -7,6 +7,8 @@
 
     ./modules/atuin.nix
     ./modules/kitty.nix
+    ./modules/lazydocker.nix
+    ./modules/lazygit.nix
   ];
 
   home.packages = with pkgs; [
@@ -33,8 +35,6 @@
   programs.zsh.enable = true;
 
   xdg.configFile = {
-    "lazydocker".source = "${inputs.dotfiles}/.config/lazydocker";
-    "lazygit".source = "${inputs.dotfiles}/.config/lazygit";
     "mpd".source = "${inputs.dotfiles}/.config/mpd";
     "niri".source = "${inputs.dotfiles}/.config/niri";
     "noctalia".source = "${inputs.dotfiles}/.config/noctalia";
