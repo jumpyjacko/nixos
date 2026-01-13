@@ -34,7 +34,6 @@
     eza
 
     # shell extras
-    atuin
     fastfetch
     lazygit
     lazydocker
