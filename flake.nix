@@ -44,7 +44,7 @@
           home-manager.extraSpecialArgs = { inherit inputs; };
           home-manager.users.jackson = ./home.nix;
         }
-      ]
+      ];
     };
   in {
     nixosConfigurations = {
