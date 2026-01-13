@@ -28,9 +28,9 @@
     cava
     evolution-data-server
 
-    niri
-
     # essentials
     kitty
   ];
+
+  programs.niri.enable = true;
 }
