@@ -12,7 +12,7 @@
     nixvim-config = {
       url = "github:jumpyjacko/nixvim";
       inputs.nixpkgs.follows = "nixpkgs";
-    } 
+    };
 
     dotfiles = {
       url = "github:jumpyjacko/dotfiles";
