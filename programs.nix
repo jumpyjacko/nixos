@@ -13,7 +13,7 @@
     lsof
     polkit
     unzip
-    tar
+    gnutar
     gzip
     bzip2
     xz
