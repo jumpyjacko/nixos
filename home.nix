@@ -10,6 +10,7 @@
     ./modules/lazydocker.nix
     ./modules/lazygit.nix
     ./modules/mpd.nix
+    ./modules/zathura.nix
   ];
 
   home.packages = with pkgs; [
@@ -41,7 +42,6 @@
     "rmpc".source = "${inputs.dotfiles}/.config/rmpc";
     "tmux".source = "${inputs.dotfiles}/.config/tmux";
     "waywall".source = "${inputs.dotfiles}/.config/waywall";
-    "zathura".source = "${inputs.dotfiles}/.config/zathura";
   };
 
   home.file.".zshrc".source = "${inputs.dotfiles}/.zshrc";
