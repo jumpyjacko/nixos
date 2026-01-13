@@ -4,6 +4,8 @@
   imports = [
     inputs.zen-browser.homeModules.beta
     inputs.noctalia.homeModules.default
+
+    ./modules/atuin.nix
   ];
 
   home.packages = with pkgs; [
@@ -30,7 +32,6 @@
   programs.zsh.enable = true;
 
   xdg.configFile = {
-    "atuin".source = "${inputs.dotfiles}/.config/atuin";
     "kitty".source = "${inputs.dotfiles}/.config/kitty";
     "lazydocker".source = "${inputs.dotfiles}/.config/lazydocker";
     "lazygit".source = "${inputs.dotfiles}/.config/lazygit";
