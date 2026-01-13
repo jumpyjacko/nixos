@@ -9,6 +9,7 @@
     ./modules/kitty.nix
     ./modules/lazydocker.nix
     ./modules/lazygit.nix
+    ./modules/mpd.nix
   ];
 
   home.packages = with pkgs; [
@@ -35,7 +36,6 @@
   programs.zsh.enable = true;
 
   xdg.configFile = {
-    "mpd".source = "${inputs.dotfiles}/.config/mpd";
     "niri".source = "${inputs.dotfiles}/.config/niri";
     "noctalia".source = "${inputs.dotfiles}/.config/noctalia";
     "rmpc".source = "${inputs.dotfiles}/.config/rmpc";
