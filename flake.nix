@@ -9,11 +9,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
-    nvim-config = {
-      url = "github:jumpyjacko/nvim";
-      flake = false;
-    };
+    nixvim-config = {
+      url = "github:jumpyjacko/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    } 
 
     dotfiles = {
       url = "github:jumpyjacko/dotfiles";

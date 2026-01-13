@@ -19,7 +19,7 @@
     xz
 
     # shell
-    inputs.neovim-nightly-overlay.packages.${pkgs.system}.default
+    inputs.nixvim-config.packages.${system}.default
     vim
     git
     curl
