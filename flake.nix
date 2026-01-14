@@ -15,7 +15,7 @@
     };
 
     dotfiles = {
-      url = "github:jumpyjacko/dotfiles";
+      url = "github:jumpyjacko/dotfiles/quickshell-noctalia";
       flake = false;
     };
 
