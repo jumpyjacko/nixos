@@ -33,24 +33,25 @@
 
   outputs = inputs@{ self, nixpkgs, home-manager, ... }:
   let
-    mkSystem = host: nixpkgs.lib.nixosSystem {
+    mkSystem = { host, user }: nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
-      specialArgs = { inherit inputs; };
+      specialArgs = { inherit inputs user; };
       modules = [
         ./hosts/${host}
+        ./users/${user}.nix
         ./configuration.nix
         home-manager.nixosModules.home-manager {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
-          home-manager.extraSpecialArgs = { inherit inputs; };
-          home-manager.users.jackson = ./home.nix;
+          home-manager.extraSpecialArgs = { inherit inputs user; };
+          home-manager.users.${user} = ./home.nix;
         }
       ];
     };
   in {
     nixosConfigurations = {
-      spectre = mkSystem "spectre";
-      vm = mkSystem "vm";
+      spectre = mkSystem { host = "spectre"; user = "jackson"; };
+      vm = mkSystem { host = "vm"; user = "jackson"; };
     };
   };
 }

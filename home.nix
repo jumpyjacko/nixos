@@ -1,6 +1,10 @@
-{ pkgs, inputs, ... }:
+{ pkgs, inputs, user, ... }:
 
 {
+  home.username = user;
+  home.homeDirectory = "/home/${user}";
+  home.stateVersion = "25.11";
+
   imports = [
     inputs.zen-browser.homeModules.beta
     inputs.noctalia.homeModules.default
@@ -11,6 +15,7 @@
     ./modules/lazygit.nix
     ./modules/mpd.nix
     ./modules/zathura.nix
+    ./modules/git.nix
   ];
 
   home.packages = with pkgs; [
@@ -48,6 +53,4 @@
   };
 
   home.file.".zshrc".source = "${inputs.dotfiles}/.zshrc";
-
-  home.stateVersion = "25.11";
 }

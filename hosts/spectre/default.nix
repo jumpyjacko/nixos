@@ -1,10 +1,9 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   imports = [
     # ./hardware-configuration.nix
     ../../desktop.nix
-    ../../users/jackson.nix
   ];
 
   boot = {
