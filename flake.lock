@@ -3,15 +3,16 @@
     "dotfiles": {
       "flake": false,
       "locked": {
-        "lastModified": 1768002794,
-        "narHash": "sha256-No8f1dQGlCCg94I8SowBUqki4rl0Yq7b8+nvucKZiW4=",
+        "lastModified": 1768199623,
+        "narHash": "sha256-LA09SODKwcY6Gk8eUyImd88/6j56pRJ4BMQb3MmlmDw=",
         "owner": "jumpyjacko",
         "repo": "dotfiles",
-        "rev": "4e039179e357577483b6056db83d2981b4348380",
+        "rev": "4bae7f29624b7ac8227ae1a163fd963bc7da5132",
         "type": "github"
       },
       "original": {
         "owner": "jumpyjacko",
+        "ref": "quickshell-noctalia",
         "repo": "dotfiles",
         "type": "github"
       }
