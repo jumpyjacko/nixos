@@ -36,10 +36,6 @@
     kitty
   ];
 
-  programs.niri.enable = true;
-  services.noctalia-shell.enable = true;
-  services.mpd.enable = true;
-
   fonts.packages = with pkgs; [
     noto-fonts
     noto-fonts-cjk-sans
@@ -49,4 +45,8 @@
     fira-code-symbols
     nerd-fonts.mononoki
   ];
+
+  programs.niri.enable = true;
+  services.noctalia-shell.enable = true;
+  services.mpd.enable = true;
 }

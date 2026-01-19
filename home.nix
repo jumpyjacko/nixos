@@ -34,9 +34,13 @@
 
   programs.zen-browser.enable = true;
   programs.kitty.enable = true;
+  programs.home-manager.enable = true;
 
   xdg.configFile = {
     "niri".source = "${inputs.dotfiles}/.config/niri";
+    "niri-extra/nixos.kdl".text = ''
+      spawn-at-startup "noctalia-shell"
+    '';
     "noctalia".source = "${inputs.dotfiles}/.config/noctalia";
     "rmpc".source = "${inputs.dotfiles}/.config/rmpc";
     "tmux".source = "${inputs.dotfiles}/.config/tmux";
